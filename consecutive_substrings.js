@@ -1,5 +1,12 @@
 function consecutiveSubstrings(string) {
   // type your code here
+  let result = [];
+  for (let i = 0; i < string.length; i++) {
+    for (let j = i + 1; j <= string.length; j++) {
+      result.push(string.slice(i, j));
+    }
+  }
+  return result;
 }
 
 if (require.main === module) {
